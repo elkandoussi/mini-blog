@@ -1,0 +1,15 @@
+<li class="list-group-item" [ngClass]="{
+                    'list-group-item-success': loveIts >= 0,
+                    'list-group-item-danger' : loveIts < 0  
+                     }"> 
+    <div class="row justify-content-between">
+        <h2 class=""> {{title}} <span class="pull-right">{{ createdAt | date:'short' }}</span></h2> 
+    </div>
+    <div class="row">
+        <p class="col-12"> {{ content }} </p> 
+    </div>
+    <div class="row btn-toolbar">      
+        <button class="btn btn-success" (click)="loveIt()">Love it</button>
+        <button class="btn btn-danger" (click)="dontLove()">Don't love !!!</button>
+    </div>
+</li>
